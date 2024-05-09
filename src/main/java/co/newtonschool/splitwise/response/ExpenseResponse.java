@@ -9,20 +9,18 @@ import java.util.List;
 public class ExpenseResponse {
     private int expenseId;
     private String expenseTitle;
-    private double expenseAmount;
+    private float expenseAmount;
     private String splitType;
     private LocalDate expenseDate;
     private LocalTime expenseTime;
-    private List<UserExpense> userExpenseResponseList;
 
-    public ExpenseResponse(int expenseId, String expenseTitle, double expenseAmount, String splitType, LocalDate expenseDate, LocalTime expenseTime, List<UserExpense> userExpenseResponseList) {
+    public ExpenseResponse(int expenseId, String expenseTitle, float expenseAmount, String splitType, LocalDate expenseDate, LocalTime expenseTime) {
         this.expenseId = expenseId;
         this.expenseTitle = expenseTitle;
         this.expenseAmount = expenseAmount;
         this.splitType = splitType;
         this.expenseDate = expenseDate;
         this.expenseTime = expenseTime;
-        this.userExpenseResponseList = userExpenseResponseList;
     }
 
     public int getExpenseId() {
@@ -41,11 +39,11 @@ public class ExpenseResponse {
         this.expenseTitle = expenseTitle;
     }
 
-    public double getExpenseAmount() {
+    public float getExpenseAmount() {
         return expenseAmount;
     }
 
-    public void setExpenseAmount(double expenseAmount) {
+    public void setExpenseAmount(float expenseAmount) {
         this.expenseAmount = expenseAmount;
     }
 
@@ -71,13 +69,5 @@ public class ExpenseResponse {
 
     public void setExpenseTime(LocalTime expenseTime) {
         this.expenseTime = expenseTime;
-    }
-
-    public List<UserExpense> getUserExpenseResponseList() {
-        return userExpenseResponseList;
-    }
-
-    public void setUserExpenseResponseList(List<UserExpense> userExpenseResponseList) {
-        this.userExpenseResponseList = userExpenseResponseList;
     }
 }

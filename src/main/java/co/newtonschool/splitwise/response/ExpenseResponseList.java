@@ -3,17 +3,17 @@ package co.newtonschool.splitwise.response;
 import java.util.List;
 
 public class ExpenseResponseList {
-    private List<ExpenseResponse> expenses;
+    private List<ExpenseResponse> expenseResponseList;
 
-    public ExpenseResponseList(List<ExpenseResponse> expenses) {
-        this.expenses = expenses;
+    public ExpenseResponseList(List<ExpenseResponse> expenseResponseList) {
+        this.expenseResponseList = expenseResponseList;
     }
 
-    public List<ExpenseResponse> getExpenses() {
-        return expenses;
+    public List<ExpenseResponse> getExpenseResponseList() {
+        return expenseResponseList;
     }
 
-    public void setExpenses(List<ExpenseResponse> expenses) {
-        this.expenses = expenses;
+    public void setExpenseResponseList(List<ExpenseResponse> expenseResponseList) {
+        this.expenseResponseList = expenseResponseList;
     }
 }

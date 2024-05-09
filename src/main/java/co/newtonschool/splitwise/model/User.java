@@ -1,7 +1,5 @@
 package co.newtonschool.splitwise.model;
 
-import java.util.Objects;
-
 public class User {
     private static int id = 1;
     private int userId;
@@ -10,7 +8,7 @@ public class User {
     private String username;
 
     public User(String firstName, String lastName) {
-        this.userId = id++;
+        userId = id++;
         this.firstName = firstName;
         this.lastName = lastName;
         setUsername();
@@ -36,12 +34,8 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername() {
-        int randomNumber = (int) ((Math.random() + 1) * 10000);
+    private void setUsername() {
+        int randomNumber = (int)((Math.random() + 1) * 10000);
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(firstName.toLowerCase())
@@ -53,13 +47,7 @@ public class User {
         this.username = stringBuilder.toString();
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "userId=" + userId +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", username='" + username + '\'' +
-                '}';
+    public String getUsername() {
+        return username;
     }
 }

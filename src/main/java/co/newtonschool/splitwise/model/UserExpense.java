@@ -1,27 +1,58 @@
 package co.newtonschool.splitwise.model;
 
 public class UserExpense {
-    private String username;
-    private double share;
+    private static int id = 1;
+    private int userExpenseId;
+    private User user;
+    private Expense expense;
+    private float share;
 
-    public UserExpense(String username, double share) {
-        this.username = username;
+    public UserExpense(User user, Expense expense, float share) {
+        userExpenseId = id++;
+        this.user = user;
+        this.expense = expense;
         this.share = share;
     }
 
-    public String getUsername() {
-        return username;
+    public int getUserExpenseId() {
+        return userExpenseId;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserExpenseId(int userExpenseId) {
+        this.userExpenseId = userExpenseId;
     }
 
-    public double getShare() {
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Expense getExpense() {
+        return expense;
+    }
+
+    public void setExpense(Expense expense) {
+        this.expense = expense;
+    }
+
+    public float getShare() {
         return share;
     }
 
-    public void setShare(double share) {
+    public void setShare(float share) {
         this.share = share;
+    }
+
+    @Override
+    public String toString() {
+        return "UserExpense{" +
+                "userExpenseId=" + userExpenseId +
+                ", user=" + user +
+                ", expense=" + expense +
+                ", share=" + share +
+                '}';
     }
 }
